@@ -1,0 +1,58 @@
+{
+  "/home/ThePrometheusX/Vesta-Industrial-Site/apps/web/src/index.css": {
+    "file": "assets/index-x0QYxXAG.css",
+    "src": "/home/ThePrometheusX/Vesta-Industrial-Site/apps/web/src/index.css"
+  },
+  "_components-CBotn9Lm.js": {
+    "file": "assets/components-CBotn9Lm.js",
+    "name": "components"
+  },
+  "_errorBoundaries-CPZQvEXz.js": {
+    "file": "assets/errorBoundaries-CPZQvEXz.js",
+    "name": "errorBoundaries",
+    "imports": [
+      "_components-CBotn9Lm.js"
+    ]
+  },
+  "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx": {
+    "file": "assets/entry.client-C7TFtWNI.js",
+    "name": "entry.client",
+    "src": "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_components-CBotn9Lm.js",
+      "_errorBoundaries-CPZQvEXz.js"
+    ]
+  },
+  "src/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-CdcYih6N.js",
+    "name": "root",
+    "src": "src/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_components-CBotn9Lm.js",
+      "_errorBoundaries-CPZQvEXz.js"
+    ],
+    "dynamicImports": [
+      "virtual:horizons-runtime"
+    ],
+    "assets": [
+      "assets/index-x0QYxXAG.css"
+    ]
+  },
+  "src/routes/home.tsx?__react-router-build-client-route": {
+    "file": "assets/home-CGoM5CSL.js",
+    "name": "home",
+    "src": "src/routes/home.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_components-CBotn9Lm.js"
+    ]
+  },
+  "virtual:horizons-runtime": {
+    "file": "assets/_virtual_horizons-runtime-qdU8uIe7.js",
+    "name": "_virtual_horizons-runtime",
+    "src": "virtual:horizons-runtime",
+    "isDynamicEntry": true
+  }
+}
