@@ -1,0 +1,148 @@
+/*
+  Halden Metals — ultramarine / cream / black duotone system.
+  Flat, borderless surfaces; spacing, rules and typography carry hierarchy.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: clip;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/*
+  ---break---
+*/
+
+@layer base {
+  :root {
+    --background: 46 30% 92%;
+    --foreground: 232 24% 9%;
+    --card: 46 30% 92%;
+    --card-foreground: 232 24% 9%;
+    --popover: 46 30% 92%;
+    --popover-foreground: 232 24% 9%;
+    --primary: 231 64% 40%;
+    --primary-foreground: 46 30% 92%;
+    --secondary: 46 18% 86%;
+    --secondary-foreground: 232 24% 9%;
+    --muted: 46 18% 86%;
+    --muted-foreground: 232 8% 34%;
+    --accent: 231 64% 40%;
+    --accent-foreground: 46 30% 92%;
+    --destructive: 0 72% 44%;
+    --destructive-foreground: 46 30% 92%;
+    --border: 232 24% 9%;
+    --input: 232 24% 9%;
+    --ring: 231 64% 40%;
+    --radius: 0rem;
+    --sidebar-background: 46 30% 92%;
+    --sidebar-foreground: 232 24% 9%;
+    --sidebar-primary: 231 64% 40%;
+    --sidebar-primary-foreground: 46 30% 92%;
+    --sidebar-accent: 46 18% 86%;
+    --sidebar-accent-foreground: 232 24% 9%;
+    --sidebar-border: 232 24% 9%;
+    --sidebar-ring: 231 64% 40%;
+  }
+  .dark {
+    --background: 232 24% 9%;
+    --foreground: 46 30% 92%;
+    --card: 232 24% 9%;
+    --card-foreground: 46 30% 92%;
+    --popover: 232 24% 9%;
+    --popover-foreground: 46 30% 92%;
+    --primary: 231 64% 52%;
+    --primary-foreground: 46 30% 92%;
+    --secondary: 232 14% 16%;
+    --secondary-foreground: 46 30% 92%;
+    --muted: 232 14% 16%;
+    --muted-foreground: 46 10% 60%;
+    --accent: 231 64% 52%;
+    --accent-foreground: 46 30% 92%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 46 30% 92%;
+    --border: 46 30% 92%;
+    --input: 46 30% 92%;
+    --ring: 231 64% 62%;
+    --sidebar-background: 232 24% 9%;
+    --sidebar-foreground: 46 30% 92%;
+    --sidebar-primary: 231 64% 52%;
+    --sidebar-primary-foreground: 46 30% 92%;
+    --sidebar-accent: 232 14% 16%;
+    --sidebar-accent-foreground: 46 30% 92%;
+    --sidebar-border: 46 30% 92%;
+    --sidebar-ring: 231 64% 62%;
+  }
+}
+
+/*
+  Typography roles: soft old-style serif display, precise technical mono data.
+*/
+.font-display {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+}
+
+.font-tech {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/*
+  The one continuous focal animation: a scan trace travelling the horizontal
+  rules, like a thermocouple trace across a potline chart.
+*/
+@keyframes trace-run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.trace-track {
+  position: relative;
+  overflow: hidden;
+}
+
+.trace-runner {
+  position: absolute;
+  inset: 0;
+  animation: trace-run 9s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+  will-change: transform;
+}
+
+.trace-dot {
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translateY(-50%);
+  background-color: hsl(var(--primary));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .trace-runner {
+    animation: none;
+  }
+}
