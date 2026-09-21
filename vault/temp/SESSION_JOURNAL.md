@@ -22,3 +22,11 @@
 - url: https://stackblitzstartersdrnbcchc-kow5--3000--d5306e6f.local-corp.webcontainer.io/
 - via: replaceState
 
+## 2026-09-21 10:53:53.837Z load
+- url: https://vestaindustrialsite-3vkh--3000--d5306e6f.local-corp.webcontainer.io/
+- title: Vesta Industrial — Alloying materials for aluminium smelters
+
+## 2026-09-21 10:53:53.887Z navigate
+- url: https://vestaindustrialsite-3vkh--3000--d5306e6f.local-corp.webcontainer.io/
+- via: replaceState
+
